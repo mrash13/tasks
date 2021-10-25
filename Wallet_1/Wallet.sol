@@ -38,13 +38,3 @@ contract Wallet {
         dest.transfer(amount, true, 128 + 32);
     }
 }
-    // Отправить с оплатой комиссии за свой счет
-    function sendWithFee(address dest, uint128 amount) public pure checkOwnerAndAccept {
-        dest.transfer(amount, true, 1);
-    }
-
-    // Отправить все деньги и уничтожить кошелек
-    function sendAllAndDestroyAcc(address dest, uint128 amount) public pure checkOwnerAndAccept {
-        dest.transfer(amount, true, 128 + 32);
-    }
-}
