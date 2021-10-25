@@ -24,9 +24,18 @@
 			"name": "putOnSale",
 			"inputs": [
 				{"name":"_nickname","type":"string"},
-				{"name":"price","type":"uint256"}
+				{"name":"_price","type":"uint256"}
 			],
 			"outputs": [
+			]
+		},
+		{
+			"name": "getTokenPrice",
+			"inputs": [
+				{"name":"_nickname","type":"string"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
 			]
 		}
 	],
@@ -39,6 +48,6 @@
 		{"name":"_timestamp","type":"uint64"},
 		{"name":"_constructorFlag","type":"bool"},
 		{"name":"players","type":"optional(cell)"},
-		{"name":"tokenPrices","type":"optional(cell)"}
+		{"name":"tOwner","type":"uint256"}
 	]
 }
